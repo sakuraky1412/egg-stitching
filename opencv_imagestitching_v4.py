@@ -60,7 +60,7 @@ def get_ROI(matches):
     get_distance_matrix(distance_matrix_a, 0, matches)
     get_distance_matrix(distance_matrix_b, 1, matches)
     result_a = get_result(distance_matrix_a, matches)
-    result_b = get_result(distance_matrix_b, matches)
+    result_b = get_result(distance_matrix_b, matches) # matches where x distance is smaller than 50
     result_dict = dict()
     for i in range(matches_len):
         current_list_a = result_a[i]
@@ -112,6 +112,13 @@ def get_displacement(ROI, default_displacement):
         print(f'displacement too far {displacementY}')
         displacementY = 260
 
+    # if abs(displacementX) > 40:
+    #     print(f'displacement too far {displacementY}')
+    #     if displacementX < 0:
+    #         displacementX = -30
+    #     else:
+    #         displacementX = 30
+
     return -displacementX, abs(displacementY)
 
 #### read NPM sift features
@@ -155,7 +162,7 @@ Step 1: read npm sift features from csv
 """
 def read_csv():
     print("Start reading npm sift features...")
-    with open('matched_features_2019_200_2.csv') as csv_file:
+    with open('matched_features_2020_200_7.csv') as csv_file:
         # suffix of each of the 4 eggs
         first_egg = "a"
         second_egg = "b"
@@ -418,7 +425,7 @@ def stitch_eggs(trainImg, queryImg, cImg, dImg, egg_name):
     # plt.figure(figsize=(10, 5))
     # plt.imshow(result)
     # plt.show()
-    cv2.imwrite(f"images/output/{egg_name}_stitched.jpg", result)
+    cv2.imwrite(f"images/output/{egg_name}_stitched.tif", result)
 
 
 def get_displacement_between_eggs(default_displacement, egg_name_key, width):
