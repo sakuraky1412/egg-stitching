@@ -19,10 +19,12 @@ This code is used in the study of the invariant features of eggshell patterns be
   - Main python file to be executed to produce stitched egg images
 - matched features folder
   - Contains matched features csv files, which are generated with a modified version of NPM with the eggshell image data set. 
-- old code folder
+- old code image stitching python folder
   - Contains code files in experimental stages 
 - 00_prinias with eggs wrong way around
   - Excel file that stores the names of the eggs whose images are upside down
+- invariant features analysis folder
+  - Contains matlab code for analyzing the invariant features within and between clutches of eggs
 
 ### Input
 
