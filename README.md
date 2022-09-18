@@ -46,9 +46,12 @@ This code is used in the study of the invariant features of eggshell patterns be
 ### Executing program
 
 * Create "images" folder and create "input" and "output" folders in it
-* Put the eggshell images to be stitched in the "input" folder.
+* Put the eggshell images to be stitched in the "input" folder, e.g.
 
-  * ![截屏2022-09-18 16.14.41](/Users/christine/Library/Application Support/typora-user-images/截屏2022-09-18 16.14.41.png)
+  * 2020_PS056_P1_a_EH.tif
+  * 2020_PS056_P1_b_EH.tif
+  * 2020_PS056_P1_c_EH.tif
+  * 2020_PS056_P1_d_EH.tif
 
 * Edit opencv_imagestitching_v4.py line 165 to specify the matched features file name, e.g. "matched features/matched_features_2020_PS056_P1.csv".
 * (Optional) edit line 180 to use the correct delimiter, either "," or ";", depending on the csv file, if you get an "IndexError: list index out of range" on line 185
@@ -65,7 +68,7 @@ This code is used in the study of the invariant features of eggshell patterns be
 
 
 - The stitched image files will be written to images/output
-  - ![截屏2022-09-18 16.15.29](/Users/christine/Library/Application Support/typora-user-images/截屏2022-09-18 16.15.29.png)
+  - 2020_PS056_P1_stitched.tif
 
 ## Authors
 
