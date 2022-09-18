@@ -162,7 +162,7 @@ Step 1: read npm sift features from csv
 """
 def read_csv():
     print("Start reading npm sift features...")
-    with open('matched_features_2020_200_7.csv') as csv_file:
+    with open('matched features/matched_features_2020_PS056_P1.csv') as csv_file:
         # suffix of each of the 4 eggs
         first_egg = "a"
         second_egg = "b"
