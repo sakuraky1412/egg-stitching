@@ -177,7 +177,7 @@ def read_csv():
 
         new_pair = False
 
-        csv_reader = csv.reader(csv_file, delimiter=';')
+        csv_reader = csv.reader(csv_file, delimiter=',')
         prev_egg_name = ''
         egg_name = ''
         for i, row in enumerate(csv_reader):
